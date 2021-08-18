@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+@import './assets/css/breakpoints'
+
+body
+    text-align: center
+    margin: 0px
+    padding: 0px
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    -webkit-font-smoothing: antialiased
+    -moz-font-smoothing: antialiased
+    -moz-osx-font-smoothing: antialiased
+
+.center
+    width: 75%
+    margin: 0px auto
+    @include extra-large
+        width: 85%
+    @include large
+        width: 95%
+
+.clearfix
+    clear: both
+    float: none
