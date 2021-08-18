@@ -1,3 +1,135 @@
+#header {
+  height: 120px;
+  width: 100%;
+  background: #f7f7f7;
+  border-bottom: 1px solid #eee;
+  border-top: 5px solid #ff0000;
+}
+@media only screen and (max-width: 497px) {
+  #header {
+    min-height: 130px;
+    overflow: hidden;
+  }
+}
 
+#logo {
+  width: 30%;
+  font-size: 30px;
+  float: left;
+  margin-top: 35px;
+}
+@media only screen and (max-width: 881px) {
+  #logo {
+    width: 265px;
+  }
+}
+@media only screen and (max-width: 813px) {
+  #logo {
+    float: none;
+    /*width: 240px*/
+    margin: 0px auto;
+    margin-top: 20px;
+  }
+}
+#logo img {
+  display: block;
+  float: left;
+  height: 60px;
+  margin-top: -9px;
+  margin-right: 10px;
+  animation: latir infinite 5s linear;
+}
+
+@keyframes latir {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.02, 1.02);
+  }
+  55% {
+    transform: scale(0.95, 0.95);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+#brand {
+  display: block;
+  margin: 0px;
+  float: left;
+}
+
+#menu {
+  width: 70%;
+  float: right;
+  font-size: 18px;
+}
+@media only screen and (max-width: 881px) {
+  #menu {
+    width: auto;
+  }
+}
+@media only screen and (max-width: 813px) {
+  #menu {
+    clear: both;
+    float: none;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    line-height: 43px;
+  }
+}
+@media only screen and (max-width: 497px) {
+  #menu {
+    line-height: 50px;
+  }
+}
+#menu ul {
+  line-height: 85px;
+  width: 60%;
+  float: right;
+}
+@media only screen and (max-width: 1314px) {
+  #menu ul {
+    width: auto;
+  }
+}
+@media only screen and (max-width: 813px) {
+  #menu ul {
+    clear: both;
+    float: none;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    line-height: 43px;
+  }
+}
+@media only screen and (max-width: 497px) {
+  #menu ul {
+    line-height: 50px;
+  }
+}
+#menu ul li {
+  display: inline-block;
+  list-style: none;
+  height: 46px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+@media only screen and (max-width: 497px) {
+  #menu ul li {
+    margin-left: 7px;
+    padding-top: 7px;
+  }
+}
+#menu a {
+  text-decoration: none;
+  color: #444;
+  transition: 300ms all;
+}
+#menu a:hover {
+  color: #ff0000;
+}
 
 /*# sourceMappingURL=header.component.css.map */
