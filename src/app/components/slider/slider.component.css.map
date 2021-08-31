@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"slider.component.css"}
+{"version":3,"sourceRoot":"","sources":["slider.component.sass","../../../assets/css/variables.sass"],"names":[],"mappings":"AAWA;EACI;EACA;EACA;EACA;EACA,YChBQ;EDiBR;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACI;EACA;EACA;;AAEJ;EACI;;AAEA;EACI;EACA;;;AAEZ;EACI;EACA;EACA,OA/BgB;EAgChB;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACI,kBCtDK;EDuDL,OCpDM","file":"slider.component.css"}
