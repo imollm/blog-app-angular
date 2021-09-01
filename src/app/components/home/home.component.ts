@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { GetArticleService } from "../../services/get-article.service";
+import { GetArticleService } from "../../services/http/request/get-article.service";
 import { Article } from "../../models/article";
 
 @Component({
@@ -10,7 +10,8 @@ import { Article } from "../../models/article";
 export class HomeComponent implements OnInit {
 
   articles: Article[] = [];
-  lastArticles = '3';
+  private readonly lastArticles = '3';
+  private readonly endpoint = 'last';
 
   constructor(
       private getArticleService: GetArticleService
@@ -20,10 +21,8 @@ export class HomeComponent implements OnInit {
     this.getLastArticles();
   }
 
-  private async getLastArticles(): Promise<void> {
-    const response = await this.getArticleService.send('last', this.lastArticles);
-    if (response.status === 'success') {
-      this.articles = response.articles;
-    }
+  private async getLastArticles() {
+    const request = this.getArticleService.send(this.endpoint, this.lastArticles);
+    this.articles = await this.getArticleService.getBody(request);
   }
 }
