@@ -1,1 +1,32 @@
-<p>blog works!</p>
+<div class="center">
+    <section id="content">
+        <h2 class="subheader">Blog articles</h2>
+
+        <form class="search-form-wrapper">
+            <div class="search-form-item">
+                <label>
+                    Title:
+                    <input type="text" />
+                </label>
+            </div>
+            <div class="search-form-item">
+                <label>
+                    Content:
+                    <input type="text" />
+                </label>
+            </div>
+            <div class="search-form-submit">
+                <input type="submit" value="Search"/>
+            </div>
+        </form>
+
+        <!-- Articles -->
+
+        <div *ngFor="let article of lastArticles">
+            <app-article
+                    [article]="article"
+            ></app-article>
+        </div>
+
+    </section>
+</div>
