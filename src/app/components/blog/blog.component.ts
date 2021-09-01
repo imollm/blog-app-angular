@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Article } from "../../models/article";
+import {GetArticleService} from "../../services/http/request/get-article.service";
 
 @Component({
   selector: 'app-blog',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogComponent implements OnInit {
 
-  constructor() { }
+  lastArticles: Article[] = [];
+
+  constructor(
+      private getArticleService: GetArticleService
+  ) { }
 
   ngOnInit(): void {
+    const lastArticles = async () => {
+      const request = this.getArticleService.send('last', '3');
+      this.lastArticles = await this.getArticleService.getBody(request);
+    }
+     lastArticles();
   }
+
+
 
 }
