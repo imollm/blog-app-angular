@@ -2,7 +2,11 @@
     <section id="content">
         <h2 class="subheader">Last articles</h2>
 
-        <app-article></app-article>
+        <div *ngFor="let article of articles">
+            <app-article
+                [article]="article"
+            ></app-article>
+        </div>
 
     </section>
 </div>
