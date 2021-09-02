@@ -1,14 +1,8 @@
 <form class="search-form-wrapper" [formGroup]="form" (ngSubmit)="onSubmit()">
     <div class="search-form-item">
         <label>
-            Title:
-            <input type="text" formControlName="title" />
-        </label>
-    </div>
-    <div class="search-form-item">
-        <label>
-            Content:
-            <input type="text" formControlName="content" />
+            To Search:
+            <input type="text" formControlName="toSearch" />
         </label>
     </div>
     <div class="search-form-submit">

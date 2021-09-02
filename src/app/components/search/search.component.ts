@@ -11,15 +11,13 @@ export class SearchComponent implements OnInit {
 
   lastArticles: Article[] = [];
   form: FormGroup;
-  params: any;
   title: string = '';
 
   constructor(
       private fb: FormBuilder
   ) {
     this.form = fb.group({
-          title: new FormControl('', Validators.required),
-          content: new FormControl('', Validators.required)
+          toSearch: new FormControl('', Validators.required)
         }
     );
   }
