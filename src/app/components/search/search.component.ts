@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {Article} from "../../models/article";
 import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 
@@ -8,6 +8,8 @@ import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
   styleUrls: ['./search.component.sass']
 })
 export class SearchComponent implements OnInit {
+
+  @Output('search') sendParams = new EventEmitter<string>();
 
   lastArticles: Article[] = [];
   form: FormGroup;
@@ -27,7 +29,9 @@ export class SearchComponent implements OnInit {
   }
 
   onSubmit(): void {
-
+    if (this.form.valid) {
+      this.sendParams.emit(this.form.value.toSearch);
+    }
   }
 
 }

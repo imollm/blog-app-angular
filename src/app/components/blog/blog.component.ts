@@ -26,4 +26,8 @@ export class BlogComponent implements OnInit {
     lastArticles();
   }
 
+  getSearchParams(param: string): void {
+
+  }
+
 }

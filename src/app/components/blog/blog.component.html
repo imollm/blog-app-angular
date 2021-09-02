@@ -3,7 +3,9 @@
         <h2 class="subheader">Blog articles</h2>
 
         <!-- Form -->
-        <app-search></app-search>
+        <app-search
+            (search)="getSearchParams($event)"
+        ></app-search>
 
         <!-- Articles -->
         <h2>{{title}}</h2>
