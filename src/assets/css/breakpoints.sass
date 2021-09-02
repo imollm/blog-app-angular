@@ -14,8 +14,16 @@
     @media only screen and (max-width: 813px)
         @content
 
+@mixin navbar-small()
+    @media only screen and (max-width: 652px)
+        @content
+
 @mixin smallest()
     @media only screen and (max-width: 643px)
+        @content
+
+@mixin header-small()
+    @media only screen and (max-width: 562px)
         @content
 
 @mixin extra-small()
