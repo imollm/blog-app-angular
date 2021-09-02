@@ -3,7 +3,8 @@
   "apiVersion": "/api/v1/article",
   "endpoints": {
     "test": {
-      "uri": "/test"
+      "uri": "/test",
+      "param": false
     },
     "getById": {
       "uri": "/get/%s",
