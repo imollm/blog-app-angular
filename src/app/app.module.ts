@@ -12,6 +12,7 @@ import { BlogComponent } from './components/blog/blog.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import { SearchComponent } from './components/search/search.component';
 import { CreateComponent } from './components/create/create.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CreateComponent } from './components/create/create.component';
     ArticleComponent,
     BlogComponent,
     SearchComponent,
-    CreateComponent
+    CreateComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

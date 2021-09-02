@@ -1,0 +1,36 @@
+@import '/src/assets/css/breakpoints'
+@import '/src/assets/css/variables'
+
+#footer
+  display: flex
+  flex-direction: column
+  align-items: center
+  width: 100%
+  min-height: 200px
+  margin-top: 4em
+  color: white
+  text-shadow: 0 0 5px $color-dark
+  background: $color-red
+  background: -moz-radial-gradient(center, ellipse cover, $color-red-one 0%, $color-red-two 0%, $color-red-four 71%, $color-red-three 100%)
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, $color-red-one), color-stop(0%, $color-red-two), color-stop(71%, $color-red-four), color-stop(100%, $color-red-three))
+  background: -webkit-radial-gradient(center, ellipse cover, $color-red-one 0%, $color-red-two 0%, $color-red-four 71%, $color-red-three 100%)
+  background: -o-radial-gradient(center, ellipse cover, $color-red-one 0%, $color-red-two 0%, $color-red-four 71%, $color-red-three 100%)
+  background: -ms-radial-gradient(center, ellipse cover, $color-red-one 0%, $color-red-two 0%, $color-red-four 71%, $color-red-three 100%)
+  background: radial-gradient(ellipse at center, $color-red-one 0%, $color-red-two 0%, $color-red-four 71%, $color-red-three 100%)
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$color-red-six, endColorstr=$color-red-six, GradientType=1 )
+
+  h4
+    padding-top: 20px
+
+  .images-wrapper
+    margin-top: -15px
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+
+    picture
+      margin: 0 10px
+
+    picture:nth-child(2)
+      border-radius: 50%
+      background-color: $color-white
