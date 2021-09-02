@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Article } from "../../models/article";
-import { GetArticleService } from "../../services/http/request/get-article.service";
+import { GetArticleService } from "../../services/http/article/get-article.service";
 import { FormBuilder, FormControl, FormGroup, Validators } from "@angular/forms";
 
 @Component({

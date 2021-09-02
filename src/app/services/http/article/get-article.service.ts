@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ApiResponse } from "../../../models/apiResponse";
-import { GetRequest } from "./get-request";
+import { GetRequest } from "../request/get-request";
 import { HttpClient } from "@angular/common/http";
 import { EndpointService } from "../endpoint/endpoint.service";
 import { HttpResponse } from "../response/http-response";
