@@ -2,23 +2,8 @@
     <section id="content">
         <h2 class="subheader">Blog articles</h2>
 
-        <form class="search-form-wrapper" [formGroup]="form" (ngSubmit)="onSubmit()">
-            <div class="search-form-item">
-                <label>
-                    Title:
-                    <input type="text" formControlName="title" />
-                </label>
-            </div>
-            <div class="search-form-item">
-                <label>
-                    Content:
-                    <input type="text" formControlName="content" />
-                </label>
-            </div>
-            <div class="search-form-submit">
-                <input type="submit" value="Search" [disabled]="form.invalid"/>
-            </div>
-        </form>
+        <!-- Form -->
+        <app-search></app-search>
 
         <!-- Articles -->
         <h2>{{title}}</h2>

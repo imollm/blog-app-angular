@@ -1,0 +1,42 @@
+@import '/src/assets/css/breakpoints'
+@import '/src/assets/css/variables'
+
+.search-form-wrapper
+  display: flex
+  flex-direction: row
+  align-content: center
+  justify-content: center
+  border-bottom: 1px solid $color-light-gray
+  @include smallest
+    flex-direction: column
+
+  .search-form-item
+    padding: 30px 10px
+    font-size: 1.2em
+
+    input
+      padding: 10px 0
+      @include smallest
+        min-width: 200px
+
+  .search-form-submit
+    padding: 30px 10px
+    max-height: 300px
+
+    input
+      cursor: pointer
+      font-size: 1.2em
+      color: $color-white
+      border: none
+      border-radius: 5px
+      background-color: $color-red
+      padding: 10px 15px
+      text-shadow: 0 0 5px $color-dark
+      background: $color-red
+      background: -moz-radial-gradient(center, ellipse cover, $color-red-one 0%, $color-red-two 0%, $color-red-four 71%, $color-red-three 100%)
+      background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, $color-red-one), color-stop(0%, $color-red-two), color-stop(71%, $color-red-four), color-stop(100%, $color-red-three))
+      background: -webkit-radial-gradient(center, ellipse cover, $color-red-one 0%, $color-red-two 0%, $color-red-four 71%, $color-red-three 100%)
+      background: -o-radial-gradient(center, ellipse cover, $color-red-one 0%, $color-red-two 0%, $color-red-four 71%, $color-red-three 100%)
+      background: -ms-radial-gradient(center, ellipse cover, $color-red-one 0%, $color-red-two 0%, $color-red-four 71%, $color-red-three 100%)
+      background: radial-gradient(ellipse at center, $color-red-one 0%, $color-red-two 0%, $color-red-four 71%, $color-red-three 100%)
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$color-red-six, endColorstr=$color-red-six, GradientType=1 )
