@@ -35,6 +35,8 @@ export class BlogComponent implements OnInit {
      lastArticles();
   }
 
+  onSubmit(): void {
 
+  }
 
 }
