@@ -27,7 +27,19 @@ export class BlogComponent implements OnInit {
   }
 
   getSearchParams(param: string): void {
+    this.getArticleWithSearchParams(param);
+  }
 
+  private async getArticleWithSearchParams(toSearch: string): Promise<void> {
+    const request = this.getArticleService.send('search', toSearch);
+    this.articles = await this.getArticleService.getBody(request);
+    this.setTitle(toSearch);
+  }
+
+  private setTitle(toSearch: string): void {
+    this.title = toSearch && this.articles && this.articles.length > 0 ?
+        `Articles with '${toSearch}' content` :
+        `No articles found`;
   }
 
 }
