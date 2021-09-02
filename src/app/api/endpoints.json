@@ -12,6 +12,10 @@
     "last": {
       "uri": "/last/%s",
       "param": true
+    },
+    "search": {
+      "uri": "/search/%s",
+      "param": true
     }
   }
 }
