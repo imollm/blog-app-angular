@@ -25,7 +25,9 @@ export class CreateComponent implements OnInit {
   }
 
   onSubmit(): void {
-
+    if (this.form.valid) {
+      console.log(this.form.value);
+    }
   }
 
   previewImage(evt: any): void {

@@ -14,7 +14,7 @@
                 <label class="form-label">Image</label>
                 <input type="file" class="form-input" accept="image/*" (change)="previewImage($event)"/>
 
-                <input type="submit" class="send-btn" value="Save"/>
+                <input type="submit" class="send-btn" value="Save" [disabled]="form.invalid" />
             </div>
 
             <div class="create-form-image">
