@@ -9,8 +9,7 @@ import {GetArticleService} from "../../services/http/article/get-article.service
 })
 export class BlogComponent implements OnInit {
 
-  lastArticles: Article[] = [];
-  params: any;
+  articles: Article[] = [];
   title: string = '';
 
   constructor(
@@ -22,7 +21,7 @@ export class BlogComponent implements OnInit {
   ngOnInit(): void {
     const lastArticles = async () => {
       const request = this.getArticleService.send('last', '3');
-      this.lastArticles = await this.getArticleService.getBody(request);
+      this.articles = await this.getArticleService.getBody(request);
     }
     lastArticles();
   }
