@@ -2,21 +2,21 @@
     <section id="content">
         <h2 class="subheader">Blog articles</h2>
 
-        <form class="search-form-wrapper">
+        <form class="search-form-wrapper" [formGroup]="form" (ngSubmit)="onSubmit()">
             <div class="search-form-item">
                 <label>
                     Title:
-                    <input type="text" />
+                    <input type="text" formControlName="title" />
                 </label>
             </div>
             <div class="search-form-item">
                 <label>
                     Content:
-                    <input type="text" />
+                    <input type="text" formControlName="content" />
                 </label>
             </div>
             <div class="search-form-submit">
-                <input type="submit" value="Search"/>
+                <input type="submit" value="Search" [disabled]="form.invalid"/>
             </div>
         </form>
 

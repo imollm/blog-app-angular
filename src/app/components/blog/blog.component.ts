@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Article } from "../../models/article";
-import {GetArticleService} from "../../services/http/request/get-article.service";
+import { GetArticleService } from "../../services/http/request/get-article.service";
+import { FormBuilder, FormControl, FormGroup, Validators } from "@angular/forms";
 
 @Component({
   selector: 'app-blog',
@@ -10,15 +11,26 @@ import {GetArticleService} from "../../services/http/request/get-article.service
 export class BlogComponent implements OnInit {
 
   lastArticles: Article[] = [];
+  form: FormGroup;
+  params: any;
+  title: string = '';
 
   constructor(
-      private getArticleService: GetArticleService
-  ) { }
+      private getArticleService: GetArticleService,
+      private fb: FormBuilder
+  ) {
+    this.form = fb.group({
+        title: new FormControl('', Validators.required),
+        content: new FormControl('', Validators.required)
+      }
+    );
+  }
 
   ngOnInit(): void {
     const lastArticles = async () => {
       const request = this.getArticleService.send('last', '3');
       this.lastArticles = await this.getArticleService.getBody(request);
+      this.title = 'Last articles';
     }
      lastArticles();
   }
