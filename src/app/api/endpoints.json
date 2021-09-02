@@ -17,6 +17,14 @@
     "search": {
       "uri": "/search/%s",
       "param": true
+    },
+    "create": {
+      "uri": "/save",
+      "param": false
+    },
+    "upload-image": {
+      "uri": "/upload-image/%s",
+      "param": true
     }
   }
 }
