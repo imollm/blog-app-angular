@@ -2,24 +2,24 @@
     <section id="content">
         <h2 class="subheader">Create an article</h2>
 
-        <form class="create-form-wrapper">
+        <form class="create-form-wrapper" [formGroup]="form" (ngSubmit)="onSubmit()">
 
             <div class="create-form-info">
                 <label class="form-label">Title</label>
-                <input type="text" class="form-input"/>
+                <input type="text" class="form-input" formControlName="title" />
 
                 <label class="form-label">Content</label>
                 <textarea class="form-input"></textarea>
 
                 <label class="form-label">Image</label>
-                <input type="file" class="form-input"/>
+                <input type="file" class="form-input" accept="image/*" (change)="previewImage($event)"/>
 
                 <input type="submit" class="send-btn" value="Save"/>
             </div>
 
             <div class="create-form-image">
                 <picture>
-                    <img src="https://unhabitatmejor.leroymerlin.es/sites/default/files/styles/header_category/public/2018-10/4%20paisaje%20macedonia.jpg?itok=AELknmF8" alt="Paisaje" />
+                    <img [src]="imgPreview" *ngIf="imgPreview" style="height: 200px; width:400px" alt="article-image" />
                 </picture>
             </div>
 
