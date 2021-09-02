@@ -1,0 +1,53 @@
+@import '/src/assets/css/breakpoints'
+@import '/src/assets/css/variables'
+
+.create-form-wrapper
+  display: flex
+  flex-direction: row
+  padding: 5px
+  min-height: 300px
+  @include more-small
+    flex-direction: column
+    align-items: center
+
+  .create-form-info
+    width: 50%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    border-right: 1px $color-light-gray solid
+    @include more-small
+      border-right: none
+      border-bottom: 1px $color-light-gray solid
+
+    .form-label
+      font-size: 1.2em
+      padding: 20px 0
+
+    .form-input
+      padding: 10px 0
+      width: 300px
+      @include mid-large
+        width: 80%
+      @include small
+        width: 90%
+      @include more-small
+        width: 100%
+
+  .create-form-image
+    width: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+
+    picture
+      width: 200px
+      height: 200px
+      @include more-small
+        display: flex
+        align-items: center
+
+      img
+        width: 100%
+        height: 100%
