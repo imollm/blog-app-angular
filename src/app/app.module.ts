@@ -10,6 +10,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ArticleComponent } from './components/article/article.component';
 import { BlogComponent } from './components/blog/blog.component';
 import {ReactiveFormsModule} from "@angular/forms";
+import { SearchComponent } from './components/search/search.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {ReactiveFormsModule} from "@angular/forms";
     SliderComponent,
     HomeComponent,
     ArticleComponent,
-    BlogComponent
+    BlogComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
