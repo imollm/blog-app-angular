@@ -7,6 +7,8 @@
   align-content: center
   justify-content: center
   border-bottom: 1px solid $color-light-gray
+  @include smallest
+    flex-direction: column
 
   .search-form-item
     padding: 30px 10px
@@ -14,6 +16,8 @@
 
     input
       padding: 10px 0
+      @include smallest
+        min-width: 200px
 
   .search-form-submit
     padding: 30px 10px
