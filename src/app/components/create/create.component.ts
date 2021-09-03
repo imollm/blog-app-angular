@@ -48,4 +48,17 @@ export class CreateComponent implements OnInit {
 
   get image(): AbstractControl { return <AbstractControl>this.form.get('image'); }
 
+  private async sendArticleData(): Promise<ApiResponse> {
+    const request = this.postArticleService.send('save', this.form.value);
+    return await this.postArticleService.getBody(request);
+  }
+
+  private async sendArticleImage(article: any): Promise<void> {
+    // TODO : When upload image is called returns error 500
+    let formData = new FormData();
+    formData.append('id', article.id);
+    formData.append('file0', this.image.value);
+    await this.postArticleService.send('upload-image', formData);
+  }
+
 }
