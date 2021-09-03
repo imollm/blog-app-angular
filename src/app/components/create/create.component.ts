@@ -19,8 +19,7 @@ export class CreateComponent implements OnInit {
   ) {
     this.form = this.fb.group({
       title: new FormControl(''),
-      content: new FormControl(''),
-      image: new FormControl('')
+      content: new FormControl('')
     });
   }
 
@@ -37,6 +36,7 @@ export class CreateComponent implements OnInit {
     if (evt.target.files && evt.target.files[0]) {
       const file = evt.target.files[0];
       const reader = new FileReader();
+      this.form.addControl('image', new FormControl(''));
       reader.onload = () => {
         this.imgPreview = reader.result as string;
       };
