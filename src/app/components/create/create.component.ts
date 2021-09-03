@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {AbstractControl, FormBuilder, FormControl, FormGroup} from "@angular/forms";
+import {PostArticleService} from "../../services/http/article/post-article.service";
+import {ApiResponse} from "../../models/apiResponse";
 
 @Component({
   selector: 'app-create',
@@ -12,7 +14,8 @@ export class CreateComponent implements OnInit {
   form: FormGroup;
 
   constructor(
-      private fb: FormBuilder
+      private fb: FormBuilder,
+      private postArticleService: PostArticleService
   ) {
     this.form = this.fb.group({
       title: new FormControl(''),
