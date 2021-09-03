@@ -26,9 +26,10 @@ export class CreateComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSubmit(): void {
+  async onSubmit(): Promise<void> {
     if (this.form.valid) {
-      console.log(this.form.value);
+      const newArticle = this.sendArticleData();
+      if (this.form.get('image')) await this.sendArticleImage(newArticle);
     }
   }
 
